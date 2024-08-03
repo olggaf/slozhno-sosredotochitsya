@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: var(--body-padding);
+  /* padding: var(--body-padding); */
   font-family: var(--main-font, serif);
   font-size: var(--main-font-size);
   line-height: var(--main-fotn-line-height);
@@ -51,20 +51,22 @@
 
 .header {
   display: grid;
-  margin-block-end: 50px;
+  margin-block-end: 40px;
   color: var(--header-text-color);
   position: relative;
   /* height: 648px; */
-  height: calc(100vh - var(--body-padding) * 2);
-  min-height: calc(668px - var(--body-padding) * 2);
+  height: 100vh;
+  min-height: 668px;
   grid-template-rows: 35% 30% 35%;
+  padding: var(--body-padding);
   /* aspect-ratio: 375/668; */
 }
 .decorative-angles::before {
   content: "";
   display: block;
   position: absolute;
-  right: 0;
+  right: var(--body-padding);
+  top: var(--body-padding);
   height: 25px;
   width: 25px;
   border-top: 1px solid currentColor;
@@ -75,8 +77,8 @@
   content: "";
   display: block;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: var(--body-padding);
+  bottom: var(--body-padding);
   height: 25px;
   width: 25px;
   border-left: 1px solid currentColor;
@@ -147,6 +149,11 @@
 .header-description {
   align-self: center;
 }
+
+.main-content {
+  padding: 0 var(--body-padding);
+}
+
 /* header text + h3 */
 .title-decor {
   background-color: var(--accent-color);
@@ -200,7 +207,7 @@
 .content-gallery-image-set {
   display: grid;
   gap: 10px;
-  margin-block-end: 50px;
+  margin-block-end: 40px;
 }
 .content-gallery-image {
   width: 100%;
@@ -211,8 +218,9 @@
   display: grid;
   position: relative;
   color: var(--header-text-color);
-  height: calc(100vh - var(--body-padding) * 2);
-  min-height: calc(668px - var(--body-padding) * 2);
+  height: 100vh;
+  min-height: 668px;
+  padding: var(--body-padding);
 }
 .footer-heading {
   /* margin: 88.56% 0 71.2%; */
@@ -229,9 +237,9 @@
     --body-padding: 20px;
   }
   .header {
-    min-height: calc(1024px - var(--body-padding) * 2);
+    min-height: 1024px;
     grid-template-rows: 38% 17% 45%;
-    margin-block-end: 80px;
+    margin-block-end: 60px;
   }
   .header__theme-menu {
     justify-self: end;
@@ -281,7 +289,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 24.6% 29.5% 40.76%;
     gap: var(--body-padding);
-    margin-block-end: 80px;
+    margin-block-end: 60px;
     /* grid-auto-flow: dense; */
   }
   .content-gallery-image {
@@ -312,7 +320,7 @@
     grid-column-end: span 2;
   }
   .footer {
-    min-height: calc(1024px - var(--body-padding) * 2);
+    min-height: 1024px;
   }
   .footer-heading {
     align-self: center;
@@ -323,7 +331,7 @@
 
 @media (width >= 1024px) {
   .header {
-    min-height: calc(768px - var(--body-padding) * 2);
+    min-height: 768px;
     grid-template-rows: 40% 20% 40%;
   }
   .header__title {
@@ -375,7 +383,7 @@
     grid-template-rows: 24.6% 30.05% 41.5%;
   }
   .footer {
-    min-height: calc(768px - var(--body-padding) * 2);
+    min-height: 768px;
   }
   .footer-heading {
     align-self: center;
