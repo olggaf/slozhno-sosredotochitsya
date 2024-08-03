@@ -4,8 +4,7 @@
   переключая тему
 */
 
-.theme_dark {
-  /* Дублируем переменные для тёмной темы */
+.page.theme_dark {
   --bg-color: #000028;
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
@@ -14,9 +13,7 @@
   --header-description-color: #000028;
   --header-text-color-rgb: rgba(255, 0, 112, 0.4);
   --content-text-heading-color: var(--accent-color);
-}
 
-.page.theme_dark {
   background-image: url(../images/cover-image-dark.png);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

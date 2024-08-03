@@ -4,7 +4,11 @@
   переключая тему
 */
 
-.theme_light {
+.page.theme_light {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
   --bg-color: #fff1f7;
   --text-color: #353430;
   --accent-color: #ff8dcb;
@@ -13,14 +17,26 @@
   --header-text-color-rgb: rgba(53, 52, 48, 0.4);
   --header-description-color: #353430;
   --content-text-heading-color: #353430;
+
+  background-image: url(../images/cover-image-light.png);
 }
 
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  background-image: url(../images/cover-image-light.png);
+@media (prefers-color-scheme: light) {
+  .page {
+    --bg-color: #fff1f7;
+    --text-color: #353430;
+    --accent-color: #ff8dcb;
+    --main-heading-color: #ffc2e6;
+    --header-text-color: #353430;
+    --header-text-color-rgb: rgba(53, 52, 48, 0.4);
+    --header-description-color: #353430;
+    --content-text-heading-color: #353430;
+
+    background-image: url(../images/cover-image-light.png);
+  }
+  .page .header__decorative_element {
+    visibility: hidden;
+  }
 }
 
 .page.theme_light .header__decorative_element {
