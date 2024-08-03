@@ -230,8 +230,8 @@
   }
   .header {
     min-height: calc(1024px - var(--body-padding) * 2);
-
     grid-template-rows: 38% 17% 45%;
+    margin-block-end: 80px;
   }
   .header__theme-menu {
     justify-self: end;
@@ -261,9 +261,7 @@
     grid-template-columns: 1fr 2fr;
     column-gap: var(--body-padding);
   }
-  .header {
-    margin-block-end: 80px;
-  }
+
   .content-text {
     margin-block-end: 80px;
   }

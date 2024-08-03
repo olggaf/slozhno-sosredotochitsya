@@ -3,7 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-.page.theme_light {
+.theme_light {
   --bg-color: #fff1f7;
   --text-color: #353430;
   --accent-color: #ff8dcb;

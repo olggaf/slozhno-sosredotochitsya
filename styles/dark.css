@@ -4,7 +4,7 @@
   переключая тему
 */
 
-.page.theme_dark {
+.theme_dark {
   /* Дублируем переменные для тёмной темы */
   --bg-color: #000028;
   --text-color: #f1b2ce;
