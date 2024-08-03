@@ -13,42 +13,6 @@
   background-size: cover;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --bg-color: #000028;
-    --text-color: #f1b2ce;
-    --accent-color: #ff0070;
-    --main-heading-color: #db00ff;
-    --header-text-color: #ff0070;
-    --header-text-color-rgb: rgba(255, 0, 112, 0.4);
-    --header-description-color: #000028;
-    --content-text-heading-color: var(--accent-color);
-
-    background-image: url(../images/cover-image-dark.png);
-  }
-  .page .header__decorative_element {
-    visibility: visible;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .page {
-    --bg-color: #fff1f7;
-    --text-color: #353430;
-    --accent-color: #ff8dcb;
-    --main-heading-color: #ffc2e6;
-    --header-text-color: #353430;
-    --header-text-color-rgb: rgba(53, 52, 48, 0.4);
-    --header-description-color: #353430;
-    --content-text-heading-color: #353430;
-
-    background-image: url(../images/cover-image-light.png);
-  }
-  .page .header__decorative_element {
-    visibility: hidden;
-  }
-}
-
 .header {
   display: grid;
   margin-block-end: 40px;
@@ -402,5 +366,41 @@
   }
   .footer-heading {
     align-self: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --bg-color: #000028;
+    --text-color: #f1b2ce;
+    --accent-color: #ff0070;
+    --main-heading-color: #db00ff;
+    --header-text-color: #ff0070;
+    --header-text-color-rgb: rgba(255, 0, 112, 0.4);
+    --header-description-color: #000028;
+    --content-text-heading-color: var(--accent-color);
+
+    background-image: url(../images/cover-image-dark.png);
+  }
+  .page .header__decorative_element {
+    visibility: visible;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .page {
+    --bg-color: #fff1f7;
+    --text-color: #353430;
+    --accent-color: #ff8dcb;
+    --main-heading-color: #ffc2e6;
+    --header-text-color: #353430;
+    --header-text-color-rgb: rgba(53, 52, 48, 0.4);
+    --header-description-color: #353430;
+    --content-text-heading-color: #353430;
+
+    background-image: url(../images/cover-image-light.png);
+  }
+  .page .header__decorative_element {
+    visibility: hidden;
   }
 }
