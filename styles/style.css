@@ -3,50 +3,14 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   /* padding: var(--body-padding); */
-  font-family: var(--main-font, serif);
+  font-family: var(--main-font, monospace, sans-serif);
   font-size: var(--main-font-size);
-  line-height: var(--main-fotn-line-height);
-  background-image: url(../images/cover-image-dark.png);
+  line-height: var(--main-font-line-height);
+  background-image: var(--bg-image-src);
   background-color: var(--bg-color);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --bg-color: #000028;
-    --text-color: #f1b2ce;
-    --accent-color: #ff0070;
-    --main-heading-color: #db00ff;
-    --header-text-color: #ff0070;
-    --header-description-color: #000028;
-    --content-text-heading-color: var(--accent-color);
-
-    background-image: url(../images/cover-image-dark.png);
-  }
-  .page .header__decorative_element,
-  .page .header__decorative_element::after {
-    visibility: visible;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .page {
-    --bg-color: #fff1f7;
-    --text-color: #353430;
-    --accent-color: #ff8dcb;
-    --main-heading-color: #ffc2e6;
-    --header-text-color: #353430;
-    --header-description-color: #353430;
-    --content-text-heading-color: #353430;
-
-    background-image: url(../images/cover-image-light.png);
-  }
-  .page .header__decorative_element,
-  .page .header__decorative_element::after {
-    visibility: hidden;
-  }
 }
 
 .header {
@@ -88,19 +52,24 @@
 
 .header__decorative_element {
   text-transform: uppercase;
-  justify-self: end;
   position: absolute;
+  top: var(--body-padding);
+  right: var(--body-padding);
   width: fit-content;
   padding-right: 28px;
 }
 .header__decorative_element::after {
   content: "";
   position: absolute;
-  height: 25px;
-  width: 25px;
-  background-image: url(../images/rec-decorative-element.png);
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 9px;
+  width: 9px;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px currentColor;
+  margin: 8px;
+  /* background-image: url(../images/rec-decorative-element.png); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   top: 0;
   right: 0;
 }
@@ -125,7 +94,12 @@
   cursor: pointer;
 }
 .header__theme-menu-button:hover {
-  border: 1px solid currentColor;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--header-text-color-rgb);
+}
+.header__theme-menu-button:focus {
+  outline: none;
 }
 .header__theme-menu-button:focus-visible {
   /* outline: 1px solid currentColor; */
@@ -157,7 +131,6 @@
 /* header text + h3 */
 .title-decor {
   background-color: var(--accent-color);
-
   color: var(--header-description-color);
   font-weight: bold;
 }
@@ -182,25 +155,33 @@
   /* margin-top: 20px; */
   margin-block-start: 20px;
 }
+/* one article */
+.content-text-one-article {
+  margin-bottom: 20px;
+}
+.content-text-one-article:last-child {
+  margin-bottom: 0;
+}
 /* p */
 .content-text-paragraph {
   color: var(--text-color);
-  margin: 0 0 20px;
 }
-/* a - linkd */
+/* a - link */
 .content-text-link {
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 .content-text-link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
+.content-text-link:focus {
+  outline: none;
+}
+
 .content-text-link:focus-visible {
   outline: 1px solid currentColor;
 }
-.content-text-paragraph:last-child {
-  margin-bottom: 0;
-}
+
 .content-text {
   margin-block-end: 50px;
 }
@@ -353,8 +334,6 @@
   .what .content-text-all-articles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    grid-auto-flow: column;
     column-gap: var(--body-padding);
   }
   .how {
