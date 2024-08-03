@@ -27,21 +27,3 @@
 .page.theme_dark .header__decorative_element {
   visibility: visible;
 }
-
-@media (prefers-color-scheme: dark) {
-  .page.theme_auto {
-    --bg-color: #000028;
-    --text-color: #f1b2ce;
-    --accent-color: #ff0070;
-    --main-heading-color: #db00ff;
-    --header-text-color: #ff0070;
-    --header-text-color-rgb: rgba(255, 0, 112, 0.4);
-    --header-description-color: #000028;
-    --content-text-heading-color: var(--accent-color);
-
-    background-image: url(../images/cover-image-dark.png);
-  }
-  .page.theme_auto .header__decorative_element {
-    visibility: visible;
-  }
-}
